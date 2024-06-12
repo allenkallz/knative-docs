@@ -21,6 +21,9 @@ If you are using a registry that has a self-signed certificate, you must configu
       name: controller
       namespace: knative-serving
     spec:
+      selector:
+        matchLabels:
+          app: controller
       template:
         spec:
           containers:
@@ -62,6 +65,9 @@ metadata:
   name: controller
   namespace: knative-serving
 spec:
+  selector:
+    matchLabels:
+      app: controller
   template:
     spec:
       containers:
